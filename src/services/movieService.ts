@@ -16,14 +16,13 @@ export async function fetchMovies(
     {
       params: {
         query,
-        page: page + 1,
+        page,
       },
       headers: {
         Authorization: `Bearer ${myKey}`,
       },
     }
   );
-  // console.log(response.data);
 
   return response.data;
 }
